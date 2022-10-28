@@ -1,0 +1,37 @@
+/**
+===============================================
+;   Title: style.css
+;   Author: Patrick Cuauro
+;   Date: 10 23 2022
+;   Modify by: N/A
+;   Description: Styling for Assignment and projects page. 
+===============================================
+*/
+body {
+    font-family: 'Oswald', Arial, sans-serif;}
+    
+.container {
+	margin-top: 50px;
+    margin-left: 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #3c275A;
+    color: white;
+    border: solid 1px #D6a800;
+    padding: 10px;
+}
+
+a {
+    color: #453674;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #D6a800;
+    color: #4f3674;
+}
+
+a:visited {
+    color: #3c275A;
+}
