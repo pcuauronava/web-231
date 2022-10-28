@@ -7,6 +7,9 @@
 ;   Description: Styling for Assignment and projects page. 
 ===============================================
 */
+body {
+    font-family: 'Oswald', Arial, sans-serif;}
+    
 .container {
 	margin-top: 50px;
     margin-left: 100px;

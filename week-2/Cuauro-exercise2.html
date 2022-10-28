@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <!--
+    ==============================================
+    ;   Title: Cuauro-exercise2.html
+    ;   Author: Professor Krasso
+    ;   Date: 10 27 2022
+    ;   Modify by: N/A
+    ;   Description: Assignment 2.2 
+    ==============================================
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 231 – Enterprise JavaScript I</title>
+    <link rel="stylesheet" href="../css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <h1>Patrick Cuauro's Landing Page</h1>
+        <h2>WEB 231 Enterprise Javascript I</h2>
+        <hr>
+    </div>
+    <h1>Exercise 2.2 - Hello JavaScript</h1>
+
+    <!-- Create a button that creates a JS alert box telling you the course I am taking. -->
+    <button type="button" id="btnMyCourse">What course am I taking?</button>
+
+    <!-- I will insert text into this paragraph with a script. -->
+    <p id="txtMyWorld"></p>
+
+    <!-- This link returns us to my course landing page showing assignments, projects, and important links. -->
+    <a href="https://pcuauronava.github.io/web-231/" class="return-home">Return</a>
+
+    <script>
+
+        // This is the script that will fill the above paragraph with the text seen below.
+        document.getElementById("txtMyWorld").innerHTML = "Welcome to McCool's world!"
+
+        // This is the script and function that will create an alert box telling you which course I am taking.
+        // First, declare a const identified as CLICKED and initialize it with the value of 'btnMyCourse.'
+        const CLICKED = document.getElementById("btnMyCourse");
+        // Then use the compact way to create and call a function when the button is clicked on.
+        CLICKED.addEventListener("click", function() {
+            document.getElementById("btnMyCourse").innerHTML = alert("WEB 231 - Enterprise JavaScript I");
+        });
+</body>
+</html>
+    <!-- 
+    All HTML assignments will use the following Google font kit, per the "HTML, CSS, and JavaScript Requirements" document,
+    page 8, found in the Weekly Resources. 
+    -->
