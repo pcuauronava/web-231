@@ -1,0 +1,37 @@
+/*
+===========================================
+; Title: Assignment 1.3
+; Author: Professor Krasso
+; Date: 10 20 2022
+; Modified by: Patrick Cuauro
+; Description: style sheet for Web-231.
+===========================================
+*/
+body {
+    font-family: 'Oswald', 'Verdana', 'Arial', sans-serif;
+}
+
+#container {
+    margin: 50px 100px 0;
+}
+
+h1, h2, h3, h4 {
+    background-color: #3C275A;
+    color: white;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+a {
+    color: #453674;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #D6A800;
+    color: #453674;
+}
+
+a:visited {
+    color: #3C275A;
+}

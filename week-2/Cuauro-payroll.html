@@ -1,0 +1,111 @@
+<!--
+    ==============================================
+    ;   Title: Cuauro-payroll.html
+    ;   Author: Professor Krasso
+    ;   Date: 10 28 2022
+    ;   Modify by: Patrick Cuauro
+    ;   Description: Assignment 2.3 
+    ==============================================
+    -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Standard HTML settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WEB 231 - Enterprise JavaScript I</title>
+
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link href="../global.css" rel="stylesheet">
+    <link href="../site.css" rel="stylesheet">
+    <link href="Cuauro-payroll.css" rel="stylesheet">
+  </head>
+  <body>
+    <main id="container">
+      <h1 id="payroll-header" class="app-header">Payroll System</h1>
+
+      <h3>Employee Record 1</h3>
+      <ul>
+        <li id="txtFirstNameLudwig"></li>
+        <li id="txtLastNameVonMises"></li>
+        <li id="txtAddressLudwig"></li>
+        <li id="txtHireDateLudwig"></li>
+        <li id="txtPayRateLudwig"></li>
+      </ul>
+
+      <h3>Employee Record 2</h3>
+      <ul>
+        <li id="txtFirstNameFriedrich"></li>
+        <li id="txtLastNameHayek"></li>
+        <li id="txtAddressFriedrich"></li>
+        <li id="txtHireDateFriedrich"></li>
+        <li id="txtPayRateFriedrich"></li>
+      </ul>
+
+      <h3>Employee Record 3</h3>
+      <ul>
+        <li id="txtFirstNameCarl"></li>
+        <li id="txtLastNameMenger"></li>
+        <li id="txtAddressCarl"></li>
+        <li id="txtHireDateCarl"></li>
+        <li id="txtPayRateCarl"></li>
+      </ul>
+    
+      <a href="../index.html" class="return-home">Return</a>
+
+    </main>
+
+    <script>
+
+      // Define the first name, last name, address, hire date, and pay rate for each of the 3 Employee Records.
+
+      let firstName1 = "Ludwig"
+      let firstName2 = "Friedrich"
+      let firstName3 = "Carl"
+
+      let lastName1 = "VonMises"
+      let lastName2 = "Hayek"
+      let lastName3 = "Menger"
+
+      let address1 = "505 Main St"
+      let address2 = "512 Main St"
+      let address3 = "600 Main St"
+
+      let hireDate1 = new Date().toLocaleDateString("en-US")
+      let hireDate2 = new Date().toLocaleDateString("en-US")
+      let hireDate3 = new Date().toLocaleDateString("en-US")
+
+      let payRate1 = 18.87425.toFixed(1)
+      let payRate2 = 25.4901.toFixed(1)
+      let payRate3 = 50.139.toFixed(1)
+
+      // Assign each of the defined values to the corresponding list item for that Employee Record.
+
+      document.getElementById("txtFirstNameLudwig").innerHTML = firstName1
+      document.getElementById("txtLastNameVonMises").innerHTML = lastName1
+      document.getElementById("txtAddressLudwig").innerHTML = address1
+      document.getElementById("txtHireDateLudwig").innerHTML = hireDate1
+      document.getElementById("txtPayRateLudwig").innerHTML = payRate1
+
+      document.getElementById("txtFirstNameFriedrich").innerHTML = firstName2
+      document.getElementById("txtLastNameHayek").innerHTML = lastName2
+      document.getElementById("txtAddressFriedrich").innerHTML = address2
+      document.getElementById("txtHireDateFriedrich").innerHTML = hireDate2
+      document.getElementById("txtPayRateFriedrich").innerHTML = payRate2
+
+      document.getElementById("txtFirstNameCarl").innerHTML = firstName3
+      document.getElementById("txtLastNameMenger").innerHTML = lastName3
+      document.getElementById("txtAddressCarl").innerHTML = address3
+      document.getElementById("txtHireDateCarl").innerHTML = hireDate3
+      document.getElementById("txtPayRateCarl").innerHTML = payRate3
+      
+    </script>
+  </body>
+</html>

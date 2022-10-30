@@ -1,0 +1,16 @@
+/**
+==================================================
+;   Title: Cuauro-payroll.css
+;   Author: Richard Krasso
+;   Date: 10 28 2022
+;   Modify by: Patrick Cuauro
+;   Description: Styling for Cuauro-payroll.html
+================================================== 
+ */
+ul {
+    border: 1px dotted red;
+}
+
+#payroll-header {
+    text-align: center;
+}
