@@ -10,19 +10,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Standard HTML settings -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>WEB 231 - Enterprise JavaScript I</title>
-
-    <!-- Importing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
-
-    <!-- Custom Stylesheet -->
     <link href="../global.css" rel="stylesheet">
     <link href="../site.css" rel="stylesheet">
     <link href="cuauro-payroll.css" rel="stylesheet">
@@ -64,7 +58,8 @@
 
     <script>
 
-      // Define the first name, last name, address, hire date, and pay rate for each of the 3 Employee Records.
+      // Declare the variables for the 3 Employee.
+      // My examples were Austrian Economists
 
       let firstName1 = "Ludwig"
       let firstName2 = "Friedrich"
@@ -74,19 +69,19 @@
       let lastName2 = "Hayek"
       let lastName3 = "Menger"
 
-      let address1 = "505 Main St"
-      let address2 = "512 Main St"
-      let address3 = "600 Main St"
+      let address1 = "344 Vienna Rd"
+      let address2 = "314 Austrian Pl"
+      let address3 = "544 LeJeune St"
 
       let hireDate1 = new Date().toLocaleDateString("en-US")
       let hireDate2 = new Date().toLocaleDateString("en-US")
       let hireDate3 = new Date().toLocaleDateString("en-US")
 
-      let payRate1 = 18.87425.toFixed(1)
-      let payRate2 = 25.4901.toFixed(1)
-      let payRate3 = 50.139.toFixed(1)
+      let payRate1 = 89.87425.toFixed(1)
+      let payRate2 = 79.4901.toFixed(1)
+      let payRate3 = 79.139.toFixed(1)
 
-      // Assign each of the defined values to the corresponding list item for that Employee Record.
+      // Insert the value of each employee.
 
       document.getElementById("txtFirstNameLudwig").innerHTML = firstName1
       document.getElementById("txtLastNameVonMises").innerHTML = lastName1
