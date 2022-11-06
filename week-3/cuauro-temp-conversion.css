@@ -1,0 +1,23 @@
+/**
+===============================================
+;   Title: cuauro-temp-conversion.css
+;   Author: Patrick cuauro
+;   Date: 10 31 2022
+;   Modify by: N/A
+;   Description: Styling for Assignment 3.3 cuauro-temp-conversion.html
+===============================================
+*/
+body {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-align: center;
+    font-size: 28px;
+}
+
+#container {
+    padding: 10px;
+}
+
+#card {
+    width: 600px;
+    margin: 3% auto 0;
+}
