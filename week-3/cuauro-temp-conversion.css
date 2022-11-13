@@ -21,3 +21,7 @@ body {
     width: 600px;
     margin: 3% auto 0;
 }
+
+#result{
+    text-align: center;
+}

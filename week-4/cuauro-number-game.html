@@ -13,9 +13,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title of the page-->
     <title>WEB 231 – Enterprise JavaScript I</title>
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="site.css" />
+    <!--Linked Styles including Google Fonts -->
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="cuauro-number-game.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,5 +25,79 @@
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body>
+    <!--Refer to Exhibit E cards with a form and form-field
+        @ HTML, CSS and JavaScript instructions -->
+    <div id="container">
+      <h1 class="app-header">Welcome to the numbers game!</h1>
+      <!--Input class card this card has the input to be compared with the random number loaded every time the page is loaded-->
+      <div id="numberPick">
+        <div class="card">
+          <div class="card-title">Pick a number between 1 and 10</div>
+          <div class="card-content">
+            <div class="form">
+              <div class="form-field">
+                <label for="txtMyNumber"> Guess the number: </label>
+                <input
+                  type="text"
+                  class="input"
+                  id="txtMyNumber"
+                  name="myNumber"
+                />
+              </div>
+
+              <div class="form-field">
+                <button class="btn btn-primary full-width" id="btnSubmit">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Refer to Exhibit C HTML page container and wrapper for cards
+        @ HTML, CSS and JavaScript instructions -->
+      <div id="card-results">
+        <h1 class="app-header"></h1>
+        <div id="results">
+          <div class="card">
+            <div class="card-title">Results:</div>
+            <div class="card-content" id="result"></div>
+          </div>
+        </div>
+      </div>
+      <!-- This item is inside de div id container but not inside a card-->
+      <a href="../index.html" class="return-home">Return</a>
+    </div>
+  </body>
+  <script>
+    // Declare the variables and tie it to the function random
+    // As the function random only gives a random number
+    // between 0 and 1 it is necessary to multiply it by 10 in order to
+    // get a integer and add 1 to make it bigger than 0 then it should
+    // be rounded to zero decimals
+    const rnd = Math.floor(Math.random() * 10 + 1);
+    // uncomment the following instruction to cheat the game using the console
+    console.log(rnd);
+    // this function is activated every time the button with the id btnSubmit is clicked
+    btnSubmit.addEventListener("click", function () {
+      // With this function I compare the value of the number from the input with id txtMyNumber
+      // with the random generated value stored at rnd
+      let myNumber = document.getElementById("txtMyNumber").value;
+      //console.log(myNumber);
+      if (myNumber == rnd) {
+        document.getElementById("result").innerHTML =
+          "Congratulations! your number is correct";
+        console.log("correct the number is" + myNumber);
+      } else if (myNumber > rnd) {
+        document.getElementById("result").innerHTML =
+          "The secret number is lower than" + myNumber;
+        console.log("lower than" + myNumber);
+      } else {
+        document.getElementById("result").innerHTML =
+          "The secret number is greater than" + myNumber;
+        console.log("greater than" + myNumber);
+      }
+    });
+  </script>
 </html>

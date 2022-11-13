@@ -29,34 +29,41 @@
     <div id="container">
       <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
       <!--Input value card-->
-      <div class="card">
-        <div class="card-title">
+      <div id="firstCard">
+        <div class="card">
+          <div class="card-title">Fahrenheit to celsius Converter</div>
           <div class="card-content">
-            <div class="form" id="form">
-              <label for="txtFahrenheit">Fahrenheit value:</label>
-              <input id="txtFahrenheit" type="text" class="input" value="" />
-              <button class="btn btn-primary full-width" id="inputTemp">
-                Convert Temperature
-              </button>
+            <div class="form">
+              <div class="form-field">
+                <label for="txtFahrenheit">Fahrenheit value:</label>
+                <input
+                  type="text"
+                  class="input"
+                  id="txtFahrenheit"
+                  name="myFahrenheit"
+                />
+              </div>
+              <div class="form-field">
+                <button class="btn btn-primary full-widht" id="inputTemp">
+                  Convert Temperature
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-title">
+      <!--build second card-->
+      <div id="second-card">
+        <div class="card">
+          <div class="card-title">Conversion Results:</div>
           <div class="card-content">
-            Conversion Results:
             <p id="celsiusTemp"></p>
           </div>
         </div>
       </div>
-      <!--Card for the return to main page link-->
-      <div class="card">
-        <div class="card-title">
-          <div class="card-content">
-            <a href="../index.html" class="home-return">Return</a>
-          </div>
-        </div>
+      <!--changed the card. no need for the card for the return button-->
+      <div id="return">
+        <a href="../index.html" class="return-home">Return</a>
       </div>
     </div>
   </body>

@@ -3,14 +3,93 @@
 ;   Title: style.css
 ;   Author: Richard Krasso
 ;   Date: 10 23 2022
-;   Modify by: Patrick Cuauro
+;   Modified by: Patrick Cuauro
 ;   Description: Styling from previous Assignments
 ================================================== 
  */
 body {
     margin: 0;
+    padding: 20px;
     font-family: 'Oswald', Verdana, Arial, sans-serif;
 }
+
+/*styling from inherited from previous classes - start. According to instructions from
+HTML, CSS, and JavaScript Requirements */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 600px;
+    /*width: 50%;*/
+    grid-template-columns: auto;
+    display: inline-grid;
+    margin: 3% auto 0;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #4F3674;
+    font-weight: 400;
+}
+
+#card-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #4F3674;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+}
+
+.input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form {
+    display: inline-grid;
+    grid-template-columns: auto;
+}
+
+.form-field {
+    padding: 20px;
+}
+
+/*styling from inherited from previous classes - end*/
 
 header {
     background-color: #3c275a;
@@ -47,28 +126,7 @@ h1 {
     padding: 10px;
 
     /* Assignment 9.2 styles */
-    margin: 2% 5% 100px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 50%;
-}
-
-.card-title {
-    text-align: center;
-    font-size: 2em;
-    color: #4F3674;
-    font-weight: 400;
-}
-
-.card-content {
-    padding: 2px 16px;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /*margin: 2% 5% 100px;*/
 }
 
 footer {
@@ -100,53 +158,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/**
-    Assignment 9.2 - Styles
- */
-.form {
-    display: inline-grid;
-    grid-template-columns: auto;
-}
-
-.form-field {
-    padding: 20px;
-}
-
-.btn {
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    padding: 15px 32px;
-    color: #000;
-}
-
-.input {
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.btn-primary {
-    background-color: #4F3674;
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background-color: #D6A800;
-    color: #4F3674;
-}
-
-.full-width {
-    width: 100%;
-}
-
 #books {
     border-collapse: collapse;
     width: 100%;
@@ -170,4 +181,27 @@ footer a:hover {
     background-color: #D6A800;
     color: #4F3674;
     cursor: pointer;
+}
+
+/* included later on 11/10/2022 */
+
+.app-header {
+    text-align: center;
+    width: 600px;
+
+}
+/* included later on 11/11/2022 */
+
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+.return-home:hover {
+    background-color: #D6A800;
+    color:#4F3674 ;
+}
+
+.return-home:visited {
+    color: #3c275a;
 }
