@@ -1,0 +1,18 @@
+/*
+==============================================
+;   Title: cuauro-sequence-game.css
+;   Author: Richard Krasso
+;   Date: 11 17 2022
+;   Modified by: Patrick Cuauro
+;   Description: Sequence game file style file 
+==============================================
+*/
+/*to use for future references*/
+.patrick-design {
+    font-family: 'Roboto' , sans-serif;
+}
+.sequence-result {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+}

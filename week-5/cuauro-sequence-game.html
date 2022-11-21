@@ -1,0 +1,146 @@
+<!--
+    ==============================================
+    ;   Title: cuauro-sequence-game.html
+    ;   Author: Richard Krasso
+    ;   Date: 11 17 2022
+    ;   Modified by: Patrick Cuauro
+    ;   Description: Sequence game file 
+    ==============================================
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title of the page-->
+    <title>WEB 231 – Enterprise JavaScript I</title>
+    <!--Linked Styles including Google Fonts -->
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="cuauro-sequence-game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Refer to Exhibit E cards with a form and form-field
+                @ HTML, CSS and JavaScript instructions -->
+    <div id="container">
+      <!--1-->
+      <h1 class="app-header">Welcome to the Sequence game!</h1>
+      <!--Input class card this card has the input to be compared with the random number loaded every time the page is loaded-->
+      <div id="SequencePick">
+        <div class="card">
+          <!--2-->
+          <div class="card-title">Sequence Selection Form</div>
+          <div class="card-content">
+            <div class="form">
+              <div class="form-field">
+                <!--3-->
+                <label for="sequence">Choose a number sequence</label>
+                <!--4-->
+                <select id="sequence" class="drop-down-menu">
+                  <option value="select" text="--Select--">--Select--</option>
+                  <option value="fibonacci" text="fibonacci">
+                    Fibonacci sequence
+                  </option>
+                  <option value="even" text="Even Numbers">Even Numbers</option>
+                  <option value="odd" text="Odd Numbers">Odd Numbers</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <!--5-->
+                <button
+                  class="btn btn-primary full-width"
+                  id="btnDisplaySequence"
+                >
+                  Display Sequence
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Refer to Exhibit C HTML page container and wrapper for cards
+                @ HTML, CSS and JavaScript instructions -->
+      <div id="card-results">
+        <!--<h1 class="app-header"></h1>-->
+        <div id="results">
+          <div class="card">
+            <!--6-->
+            <div class="card-title">Sequence Results:</div>
+            <div class="card-content">
+              <div class="sequence-result" id="result"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- This item is inside de div id container but not inside a card-->
+      <!--7-->
+      <a href="../index.html" class="return-home">Return</a>
+    </div>
+  </body>
+  <script>
+    //Variables declaration to be used
+    let num1 = 0;
+    let num2 = 1;
+    let next = 0;
+    let fibonacciSequenceText = 0;
+    let evenNum = 2;
+    let finalEven = 2;
+    let oddNum = -1;
+    let finalOdd = 1;
+
+    //Event listener to trigger a function when button is pressed
+    btnDisplaySequence.addEventListener("click", function () {
+      //This line is to reset the element to an empty string after the cycle is completed
+      //Change empty string in the reset to undefined,
+      document.getElementById("result").innerHTML = undefined;
+      let choice = document.getElementById("sequence").value;
+
+      //This console log is to show the process
+      console.log("your choice was:" + "" + choice);
+      if (choice == "select") {
+        //When this option is selected show an alert
+        alert("Invalid selection, please try again!");
+        document.getElementById("result").innerHTML = "";
+      } else if (choice == "even") {
+        do {
+          evenNum = evenNum + 2;
+          finalEven += "," + evenNum;
+          document.getElementById("result").innerHTML = finalEven;
+
+          //This console log is to show the process
+          console.log(finalEven);
+        } while (evenNum < 18);
+      } else if (choice == "odd") {
+        //Test 2 change the value assignment in a different place in the loop
+        oddNum = 1;
+        do {
+          oddNum = oddNum + 2;
+          finalOdd += "," + oddNum;
+          document.getElementById("result").innerHTML = finalOdd;
+
+          //This console log is to show the process
+          console.log(finalOdd);
+        } while (oddNum < 19);
+      } else if (choice == "fibonacci") {
+        while (num2 <= 40) {
+          next = num1 + num2;
+          num1 = num2;
+          num2 = next;
+          fibonacciSequenceText += "," + num1;
+          document.getElementById("result").innerHTML = fibonacciSequenceText;
+
+          //This console log is to show the process
+          console.log(fibonacciSequenceText);
+        }
+      }
+    });
+  </script>
+</html>
