@@ -11,7 +11,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin: 3px;
-    /*border: solid, white 5px;*/
+    border: solid white 1px;
 }
 th {
     padding-top: 12px;
@@ -32,4 +32,22 @@ tr:hover {
 }
 #authors {
     display: none;
+}
+#authors th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: #fff;
+}
+
+#authors td, #books th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#books tr:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+    cursor: pointer;
 }
