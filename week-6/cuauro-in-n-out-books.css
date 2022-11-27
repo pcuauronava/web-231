@@ -1,0 +1,35 @@
+/*
+==============================================
+;   Title: cuauro-in-n-out.css
+;   Author: Richard Krasso
+;   Date: 11 21 2022
+;   Modified by: Patrick Cuauro
+;   Description: cuauro-in-n-out file style file 
+==============================================
+*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 3px;
+    /*border: solid, white 5px;*/
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+}
+th tr tbody {
+    border: 1px solid #ddd;}
+tr:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+    cursor: pointer;
+}
+#books {
+    display: none;
+}
+#authors {
+    display: none;
+}
