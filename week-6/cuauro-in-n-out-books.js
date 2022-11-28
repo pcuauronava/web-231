@@ -4,7 +4,7 @@
 ;   Author: Patrick Cuauro
 ;   Date: 11 22 2022
 ;   Modified by: Patrick Cuauro
-;   Description: Sequence game file 
+;   Description: JavaScript file for In and Out Books 
 ==============================================
 */
 //let books;
