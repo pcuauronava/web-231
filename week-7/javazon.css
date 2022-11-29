@@ -1,0 +1,18 @@
+/*
+==============================================
+;   Title: javazon.css
+;   Author: Richard Krasso
+;   Date: 11 28 2022
+;   Modified by: Patrick Cuauro
+;   Description: style file for javazon.html file
+==============================================
+*/
+.products {
+    display: none;
+}
+.services {
+    display: none;
+}
+.employees {
+    display: none;
+}
