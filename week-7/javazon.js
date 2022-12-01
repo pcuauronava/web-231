@@ -13,12 +13,9 @@ class Product {
       this.description = description;
       this.price = price;
       this.quantity = quantity;
-    }
-    totalValue() {
-        let totalValue = (669).toFixed(2);
+      this.totalV = this.price * this.quantity;
     }
   }
-
   class Services {
     constructor(id, description, hourlyRate, min) {
       this.id = id;
@@ -51,15 +48,84 @@ class Product {
   let sandraLinn = new Employee (189915, "Sandra", "Linn", 32);
   let carlHendricks = new Employee (108342, "Carl", "Hendricks", 22);
   let peterStein = new Employee (369248, "Peter", "Stein", 28);
+//binding information to the tables
+//Product1
+document.getElementById("productId1").innerHTML = cellPhone.id;
+document.getElementById("productDesc1").innerHTML = cellPhone.description;
+document.getElementById("productPrice1").innerHTML = cellPhone.price;
+document.getElementById("productQty1").innerHTML = cellPhone.quantity;
+document.getElementById("productTotalV1").innerHTML = cellPhone.totalV;
+//Product2
+document.getElementById("productId2").innerHTML = laptop.id;
+document.getElementById("productDesc2").innerHTML = laptop.description;
+document.getElementById("productPrice2").innerHTML = laptop.price;
+document.getElementById("productQty2").innerHTML = laptop.quantity;
+document.getElementById("productTotalV2").innerHTML = laptop.totalV;
+//Product3
+document.getElementById("productId3").innerHTML = snickers.id;
+document.getElementById("productDesc3").innerHTML = snickers.description;
+document.getElementById("productPrice3").innerHTML = snickers.price;
+document.getElementById("productQty3").innerHTML = snickers.quantity;
+document.getElementById("productTotalV3").innerHTML = snickers.totalV;
+//Product4
+document.getElementById("productId4").innerHTML = car.id;
+document.getElementById("productDesc4").innerHTML = car.description;
+document.getElementById("productPrice4").innerHTML = car.price;
+document.getElementById("productQty4").innerHTML = car.quantity;
+document.getElementById("productTotalV4").innerHTML = car.totalV;
+//Product5
+document.getElementById("productId5").innerHTML = cap.id;
+document.getElementById("productDesc5").innerHTML = cap.description;
+document.getElementById("productPrice5").innerHTML = cap.price;
+document.getElementById("productQty5").innerHTML = cap.quantity;
+document.getElementById("productTotalV5").innerHTML = cap.totalV;
 
-  document.getElementById("products").style.display = "none";
-  document.getElementById("services").style.display = "none";
-  document.getElementById("employees").style.display = "none";
+//Service1
+document.getElementById("serviceId1").innerHTML = haircut.id;
+document.getElementById("serviceDesc1").innerHTML = haircut.description;
+document.getElementById("serviceHourlyRate1").innerHTML = haircut.hourlyRate;
+document.getElementById("serviceMin1").innerHTML = haircut.min;
+//Service2
+document.getElementById("serviceId2").innerHTML = massage.id;
+document.getElementById("serviceDesc2").innerHTML = massage.description;
+document.getElementById("serviceHourlyRate2").innerHTML = massage.hourlyRate;
+document.getElementById("serviceMin2").innerHTML = massage.min;
+//Service3
+document.getElementById("serviceId3").innerHTML = pedicure.id;
+document.getElementById("serviceDesc3").innerHTML = pedicure.description;
+document.getElementById("serviceHourlyRate3").innerHTML = pedicure.hourlyRate;
+document.getElementById("serviceMin3").innerHTML = pedicure.min;
+
+//Employee1
+document.getElementById("employeeId1").innerHTML = reubenMeyer.id;
+document.getElementById("employeeFirstName1").innerHTML = reubenMeyer.firstName;
+document.getElementById("employeeLastName1").innerHTML = reubenMeyer.lastName;
+document.getElementById("employeeSalary1").innerHTML = reubenMeyer.salary;
+//Employee2
+document.getElementById("employeeId2").innerHTML = milaKunanis.id;
+document.getElementById("employeeFirstName2").innerHTML = milaKunanis.firstName;
+document.getElementById("employeeLastName2").innerHTML = milaKunanis.lastName;
+document.getElementById("employeeSalary2").innerHTML = milaKunanis.salary;
+//Employee3
+document.getElementById("employeeId3").innerHTML = sandraLinn.id;
+document.getElementById("employeeFirstName3").innerHTML = sandraLinn.firstName;
+document.getElementById("employeeLastName3").innerHTML = sandraLinn.lastName;
+document.getElementById("employeeSalary3").innerHTML = sandraLinn.salary;
+//Employee4
+document.getElementById("employeeId4").innerHTML = carlHendricks.id;
+document.getElementById("employeeFirstName4").innerHTML = carlHendricks.firstName;
+document.getElementById("employeeLastName4").innerHTML = carlHendricks.lastName;
+document.getElementById("employeeSalary4").innerHTML = carlHendricks.salary;
+//Employee5
+document.getElementById("employeeId5").innerHTML = peterStein.id;
+document.getElementById("employeeFirstName5").innerHTML = peterStein.firstName;
+document.getElementById("employeeLastName5").innerHTML = peterStein.lastName;
+document.getElementById("employeeSalary5").innerHTML = peterStein.salary;
   
-  const myProduct = new Product(11181980, "Solar Panel", 245, 4);
+  //const myProduct = new Product(11181980, "Solar Panel", 245, 4);
 //  document.getElementById("demo").innerHTML =
   //myProduct.id + " " + myProduct.description;
-console.log (myProduct.id + " " + myProduct.description + " " + myProduct.price + " " + myProduct.quantity);
+//console.log (myProduct.id + " " + myProduct.description + " " + myProduct.price + " " + myProduct.quantity);
 
 btnDisplayListing.addEventListener("click", function () {
   let choice = document.getElementById("listing").value;
