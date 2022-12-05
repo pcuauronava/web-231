@@ -33,15 +33,17 @@ tr:hover {
 #authors {
     display: none;
 }
-#authors th {
+#authors th, #books th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #4F3674;
     color: #fff;
+    border: 1px solid #ddd;
+
 }
 
-#authors td, #books th {
+#authors td, #books td {
     border: 1px solid #ddd;
     padding: 8px;
 }

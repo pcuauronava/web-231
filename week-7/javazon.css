@@ -21,6 +21,7 @@ table {
     width: 100%;
     margin: 3px;
     border: solid white 1px;
+    /*border-color: gray;*/
 }
 th {
     padding-top: 12px;
@@ -30,33 +31,23 @@ th {
     color: white;
 }
 th tr tbody {
-    border: 1px solid #ddd;}
+    border: 1px solid #ddd;
+    /*border-color: gray;*/
+}    
 tr:hover {
     background-color: #D6A800;
     color: #4F3674;
     cursor: pointer;
 }
-#books {
-    display: none;
-}
-#authors {
-    display: none;
-}
-#authors th {
+#products th, #services th, #employees th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #4F3674;
     color: #fff;
+    border: 1px solid #ddd;
 }
-
-#authors td, #books th {
+#products td, #services td, #employees td {
     border: 1px solid #ddd;
     padding: 8px;
-}
-
-#books tr:hover {
-    background-color: #D6A800;
-    color: #4F3674;
-    cursor: pointer;
 }

@@ -7,6 +7,7 @@
 ;   Description: JavaScript file for javazon.html
 ==============================================
 */
+//Declaration of the variables and the classes.
 class Product {
     constructor(id, description, price, quantity) {
       this.id = id;
@@ -33,15 +34,16 @@ class Product {
     }
   }
   let choice = "undefined";
+  //Object declaration after the classes declaration.
   let cellPhone = new Product (123456, "Google Pixel 7 Pro", 700, 788);
   let laptop = new Product (654321, "HP Envy x360", 560, 23);
   let snickers = new Product (162534, "Skechers shoes", 80, 330);
   let car = new Product (342516, "Honda Civic", 34000, 30);
   let cap = new Product (524361, "Nike cap", 40, 4000);
 
-  let haircut = new Services (112233, "Haircut", 20, 30);
-  let massage = new Services (223344, "Massage", 23, 30);
-  let pedicure = new Services (334455, "Pedicure", 30, 40);
+  let haircut = new Services (112233, "Haircut", 20.667, 30);
+  let massage = new Services (223344, "Massage", 23.567, 30);
+  let pedicure = new Services (334455, "Pedicure", 30.769, 40);
   
   let reubenMeyer = new Employee (154065, "Reuben", "Meyer", 28);
   let milaKunanis = new Employee (321540, "Mila", "Kunanis", 30);
@@ -121,15 +123,11 @@ document.getElementById("employeeId5").innerHTML = peterStein.id;
 document.getElementById("employeeFirstName5").innerHTML = peterStein.firstName;
 document.getElementById("employeeLastName5").innerHTML = peterStein.lastName;
 document.getElementById("employeeSalary5").innerHTML = peterStein.salary;
-  
-  //const myProduct = new Product(11181980, "Solar Panel", 245, 4);
-//  document.getElementById("demo").innerHTML =
-  //myProduct.id + " " + myProduct.description;
-//console.log (myProduct.id + " " + myProduct.description + " " + myProduct.price + " " + myProduct.quantity);
-
+//Event listener attached to the button of the page  
 btnDisplayListing.addEventListener("click", function () {
   let choice = document.getElementById("listing").value;
   console.log(choice);
+  //comparison of the selection to change the styles of the css file using the id of the page
   if (choice == "select") {
     alert("Make a selection");
   }
