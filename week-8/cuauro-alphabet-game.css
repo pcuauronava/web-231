@@ -1,0 +1,62 @@
+/*
+==============================================
+;   Title: cuauro-alphabet-game.css
+;   Author: Richard Krasso
+;   Date: 12 06 2022
+;   Modified by: Patrick Cuauro
+;   Description: style file
+==============================================
+*/
+#products {
+    display: none;
+}
+#services {
+    display: none;
+}
+#employees {
+    display: none;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 3px;
+    border: solid white 1px;
+    /*border-color: gray;*/
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+}
+th tr tbody {
+    border: 1px solid #ddd;
+    /*border-color: gray;*/
+}
+tr:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+    cursor: pointer;
+}
+#products th, #services th, #employees th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: #fff;
+    border: 1px solid #ddd;
+}
+#products td, #services td, #employees td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.sequence-result {
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+}
+/*This in case the div needs to be hidden, look at comments at JS file*/
+#conclusion {
+    display: block;
+}
