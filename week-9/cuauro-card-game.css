@@ -1,0 +1,13 @@
+/*
+==============================================
+;   Title: cuauro-card-game.css
+;   Author: Richard Krasso
+;   Date: 12 12 2022
+;   Modified by: Patrick Cuauro
+;   Description: style file for Card game page
+==============================================
+*/
+.player-card {
+    color: beige;
+    text-align: center;
+}
