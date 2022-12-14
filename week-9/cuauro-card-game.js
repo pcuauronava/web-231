@@ -16,33 +16,52 @@ class Card {
 }
 //AJR b)
 class Dealer {
-    constructor() {
-    getDeckOfCards();
-    }
-}
-//AJR 1)
-let CARD_COUNT = 52;
-//AJR 2)
-let cards = [];
-//AJR 3)
-const faces = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
-//AJR 4)
-const suits = ["Hearts", "Diamonds", "Clubs","Spades"];
-
-//let tempCard = this.cards[position.card];
-//AJR 5)
-function getDeckOfCards() {
-for ( let CARD_COUNT in cards) {
-    //count<this.CARD_COUNT;
-    this.cards[count] = new Card(this.faces[count % 13], this.suits[Math.floor(count / 13)]);
-}};
-function shuffle() {
-Math.floor(Math.random()* this.CARD_COUNT);    
-}
-function test () {
-    let sTest = CARD_COUNT * CARD_COUNT;
-    console.log("sTest");
-}
-function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
+    //AJR 1)
+    CARD_COUNT = 52;
+    //AJR 2)
+    cards = [];
+    //AJR 3)
+    faces = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+    //AJR 4)
+    suits = ["Hearts", "Diamonds", "Clubs","Spades"];
+    constructor(){
+        //AJR 6)
+        this.getDeckOfCards();
+    };
+    //Keyword "function" not needed inside the class, for declaration
+    shuffle() {
+        //ARJ 7.i
+        for (let count = 0; count < this.CARD_COUNT; count++) {
+            //ARJ 7.ii
+            let secondCard = Math.floor(Math.random()* this.CARD_COUNT);
+            //ARJ 7.iii
+            let tempCard = this.cards[count];
+            // continue here
+        }        
+    }    
+    //AJR 5)
+    getDeckOfCards() {
+        //AJR 5.i
+        //count is only declared inside the for function
+        //"this" is used to specify it is from the dealer class
+        for (let count = 0; count < this.CARD_COUNT; count++) {
+            let testing = count % 13;
+            let testing2 = count / 13;
+            let testing3 = Math.floor(testing2);
+            this.cards[count] = new Card(this.faces[count % 13],this.suits[Math.floor(count / 13)]);
+        }    
+    };
 };
-btnDealCards.addEventListener("click", test());
+//getDeckOfCards;
+//let tempCard = this.cards[position.card];
+//AJR 7)
+ function test () {
+    let dealer = new Dealer();
+    dealer.getDeckOfCards();
+    console.log();
+    //let sTest = CARD_COUNT * CARD_COUNT;
+    //console.log(sTest);
+ }
+//function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
+//};
+btnDealCards.addEventListener("click", test);
