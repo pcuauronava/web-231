@@ -33,11 +33,22 @@ class Dealer {
         //ARJ 7.i
         for (let count = 0; count < this.CARD_COUNT; count++) {
             //ARJ 7.ii
+            //linea 37 usa un numero ramdom para escoger la posicion de
+            //ese numero en el deck
+            //secondCard es un numero para el indice del array del deck
             let secondCard = Math.floor(Math.random()* this.CARD_COUNT);
             //ARJ 7.iii
+            //almacena el valor de la carta que depende del indice
+            //en una variable llamada tempCard
             let tempCard = this.cards[count];
-            // continue here
-        }        
+            //asigna el valor de una carta random en el deck en la
+            //posicion count
+            this.cards[count] = this.cards[secondCard];
+            //recordar la carta que estaba en la posicion 0
+            this.cards[secondCard] = tempCard;
+            
+        }   
+        //console.log();     
     }    
     //AJR 5)
     getDeckOfCards() {
@@ -52,16 +63,48 @@ class Dealer {
         }    
     };
 };
+//AJR 8)
+function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
+    return `<div class="player-card">
+                <div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">
+                        ${card.face}
+                </div>
+                <div class="card-content2">
+                        <span class="${suitIcon}" style="color:${suitColor}"></span>
+                    <div class="player-card"></div>
+                </div>
+            </div>`
+    //return `<div>Hello</div>`
+};
 //getDeckOfCards;
 //let tempCard = this.cards[position.card];
 //AJR 7)
- function test () {
+ function trigger () {
     let dealer = new Dealer();
-    dealer.getDeckOfCards();
-    console.log();
+    //dealer.getDeckOfCards();
+    dealer.shuffle();
+    let cardOutputWithIcon = "";
+    //console.log();
     //let sTest = CARD_COUNT * CARD_COUNT;
     //console.log(sTest);
- }
-//function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
-//};
-btnDealCards.addEventListener("click", test);
+    for (const card of dealer.cards) {
+        switch (card.suit) {
+            case "Hearts":
+            cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-heart","red","red");
+            break;
+            case "Diamonds":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-diamond","red","red");
+            break;
+            case "Clubs":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-club","black","black");
+            break;
+            case "Spades":
+                cardOutputWithIcon += buildPlayingCard(card, "mdi mdi-cards-spade","black","black");
+            break;
+        }
+    }
+    //let patrick = document.getElementsByClassName("player-card-container");
+    //console.log(patrick);
+    document.getElementById("player-card-container").innerHTML = cardOutputWithIcon;
+}
+btnDealCards.addEventListener("click", trigger);
