@@ -33,28 +33,24 @@ class Dealer {
         //ARJ 7.i
         for (let count = 0; count < this.CARD_COUNT; count++) {
             //ARJ 7.ii
-            //linea 37 usa un numero ramdom para escoger la posicion de
-            //ese numero en el deck
-            //secondCard es un numero para el indice del array del deck
+            //Uses a random number to select a card based on the index.
+            //secondCard is a number to be used with the index.
             let secondCard = Math.floor(Math.random()* this.CARD_COUNT);
             //ARJ 7.iii
-            //almacena el valor de la carta que depende del indice
-            //en una variable llamada tempCard
+            //store the value of the card that depends of the index
+            //in a variable called tempCard.
             let tempCard = this.cards[count];
-            //asigna el valor de una carta random en el deck en la
-            //posicion count
+            //Assigns the value of a random card from the deck to the "count" position.
             this.cards[count] = this.cards[secondCard];
-            //recordar la carta que estaba en la posicion 0
+            //Remember the card that was on the position 0.
             this.cards[secondCard] = tempCard;
-            
         }   
-        //console.log();     
     }    
     //AJR 5)
     getDeckOfCards() {
         //AJR 5.i
-        //count is only declared inside the for function
-        //"this" is used to specify it is from the dealer class
+        //count is only declared inside the for function the scope is local.
+        //the keyword "this" is used to specify it is from the dealer class.
         for (let count = 0; count < this.CARD_COUNT; count++) {
             let testing = count % 13;
             let testing2 = count / 13;
@@ -66,27 +62,21 @@ class Dealer {
 //AJR 8)
 function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
     return `<div class="player-card">
-                <div class="card-title" style="text-align: left; font-size: 20px; padding-left: 10px; color: ${faceColor}">
+                <div class="card-title" style="text-align: left; font-size: 15px; padding-left: 10px; color: ${faceColor}">
                         ${card.face}
                 </div>
-                <div class="card-content2">
+                <div class="card-content">
                         <span class="${suitIcon}" style="color:${suitColor}"></span>
-                    <div class="player-card"></div>
+                    <div class="card-title" style="text-align: right; font-size: 15px; padding-left: 10px; color: ${faceColor}">
+                    ${card.face}</div>
                 </div>
             </div>`
-    //return `<div>Hello</div>`
 };
-//getDeckOfCards;
-//let tempCard = this.cards[position.card];
 //AJR 7)
  function trigger () {
     let dealer = new Dealer();
-    //dealer.getDeckOfCards();
     dealer.shuffle();
     let cardOutputWithIcon = "";
-    //console.log();
-    //let sTest = CARD_COUNT * CARD_COUNT;
-    //console.log(sTest);
     for (const card of dealer.cards) {
         switch (card.suit) {
             case "Hearts":
@@ -103,8 +93,6 @@ function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
             break;
         }
     }
-    //let patrick = document.getElementsByClassName("player-card-container");
-    //console.log(patrick);
     document.getElementById("player-card-container").innerHTML = cardOutputWithIcon;
 }
 btnDealCards.addEventListener("click", trigger);
